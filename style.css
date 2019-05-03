@@ -1,0 +1,39 @@
+.scroll {
+    opacity: 0;
+}
+.scroll.show {
+    animation: showAnim 0.5s;
+    opacity: 1;
+}
+.scroll.hide {
+    animation: hideAnim 0.5s;
+    opacity: 0;
+    transform: translateY(0);
+}
+.navigation {
+    position: sticky;
+    background: darkcyan;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+@keyframes hideAnim {
+    from {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+@keyframes showAnim {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
